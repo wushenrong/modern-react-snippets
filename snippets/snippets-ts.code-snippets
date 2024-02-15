@@ -1,0 +1,69 @@
+{
+  "Functional Component": {
+    "prefix": "fc",
+    "body": [
+      "function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (${0})",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Functional Component"
+  },
+  "Stateless Functional Component": {
+    "prefix": "sfc",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {"
+      "\treturn (${0})",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Stateless Function Component"
+  },
+  "Functional Component With Props": {
+    "prefix": "fcp",
+    "body": [
+      "interface ${1:${TM_FILENAME_BASE}}Props {}",
+      "",
+      "function ${1:${TM_FILENAME_BASE}}({}: ${1:${TM_FILENAME_BASE}}Props) {",
+      "\treturn (${0})",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Functional Component With Props"
+  },
+  "Stateless Functional Component With Props": {
+    "prefix": "sfcp",
+    "body": [
+      "interface ${1:${TM_FILENAME_BASE}}Props {}",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = ({}: ${1:${TM_FILENAME_BASE}}Props) => {"
+      "\treturn (${0})",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Stateless Functional Component With Props"
+  },
+  "Add new state variable using useState Hook": {
+    "prefix": "uhs",
+    "body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState(${2})"],
+    "description": "Add new state variable using useState Hook"
+  },
+  "Add new state variable using useReducer Hook": {
+    "prefix": "uhr",
+    "body": ["const [${1}, dispatch] = useReducer(${2}, ${3})"],
+    "description": "Add new state variable using useReducer Hook"
+  },
+  "Add external state using useEffect Hook"{
+    "prefix": "uhe",
+    "body": [
+      "useEffect(() => {",
+      "\t${2}",
+      "}, [${1}])"
+    ],
+    "description": "Add external state using useEffect Hook"
+  },
+}
