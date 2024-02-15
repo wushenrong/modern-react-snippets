@@ -1,5 +1,28 @@
 {
-  "Functional Component": {
+  "Main React Entry Point": {
+    "prefix": "mrep",
+    "body": [
+      "import React from 'react'",
+      "import ReactDOM from 'react-dom/client'",
+      "import App from './App'",
+      "",
+      "const rootContainerElement = document.getElementById('root')",
+      "",
+      "if (!rootContainerElement) {",
+      "\tthrow Error('No root container element found, please add one with id=\"root\".')",
+      "}",
+      "",
+      "const root = ReactDOM.createRoot(rootContainerElement)",
+      "",
+      "root.render(",
+      "\t<React.StrictMode>",
+      "\t\t<App />",
+      "\t</React.StrictMode>,",
+      ")",
+    ],
+    "description": "Create entry point for React to hook on"
+  },
+  "Function Component": {
     "prefix": "fc",
     "body": [
       "function ${1:${TM_FILENAME_BASE}}() {",
@@ -8,9 +31,9 @@
       "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
-    "description": "Functional Component"
+    "description": "Function Component"
   },
-  "Stateless Functional Component": {
+  "Arrow Function Component": {
     "prefix": "sfc",
     "body": [
       "const ${1:${TM_FILENAME_BASE}} = () => {"
@@ -19,9 +42,9 @@
       "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
-    "description": "Stateless Function Component"
+    "description": "Arrow Function Component"
   },
-  "Functional Component With Props": {
+  "Function Component With Props": {
     "prefix": "fcp",
     "body": [
       "interface ${1:${TM_FILENAME_BASE}}Props {}",
@@ -32,9 +55,9 @@
       "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
-    "description": "Functional Component With Props"
+    "description": "Function Component With Props"
   },
-  "Stateless Functional Component With Props": {
+  "Arrow Function Component With Props": {
     "prefix": "sfcp",
     "body": [
       "interface ${1:${TM_FILENAME_BASE}}Props {}",
@@ -45,7 +68,7 @@
       "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
-    "description": "Stateless Functional Component With Props"
+    "description": "Arrow Function Component With Props"
   },
   "Add new state variable using useState Hook": {
     "prefix": "uhs",
@@ -57,7 +80,7 @@
     "body": ["const [${1}, dispatch] = useReducer(${2}, ${3})"],
     "description": "Add new state variable using useReducer Hook"
   },
-  "Add external state using useEffect Hook"{
+  "Add external state using useEffect Hook": {
     "prefix": "uhe",
     "body": [
       "useEffect(() => {",
