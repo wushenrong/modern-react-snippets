@@ -2,6 +2,11 @@
 
 All notable changes to the "modern-react-snippets" extension will be documented in this file.
 
+## [0.0.3]
+
+- Rename code-snippets to json files to add missing commas.
+- Rename snippets to their language type.
+
 ## [0.0.2]
 
 - Fix snippets configuration

@@ -18,7 +18,7 @@
       "\t<React.StrictMode>",
       "\t\t<App />",
       "\t</React.StrictMode>,",
-      ")",
+      ")"
     ],
     "description": "Create entry point for React to hook on"
   },
@@ -36,24 +36,22 @@
   "Arrow Function Component": {
     "prefix": "sfc",
     "body": [
-      "const ${1:${TM_FILENAME_BASE}} = () => {"
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
       "\treturn (${0})",
       "}",
       "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
-    "description": "Stateless Function Component"
+    "description": "Arrow Function Component"
   },
   "Function Component With Props": {
     "prefix": "fcp",
     "body": [
-      "import PropTypes from 'prop-types'",
+      "interface ${1:${TM_FILENAME_BASE}}Props {}",
       "",
-      "function ${1:${TM_FILENAME_BASE}}({}) {",
+      "function ${1:${TM_FILENAME_BASE}}({}: ${1:${TM_FILENAME_BASE}}Props) {",
       "\treturn (${0})",
       "}",
-      "",
-      "${1:${TM_FILENAME_BASE}}.propTypes = {}",
       "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
@@ -62,13 +60,11 @@
   "Arrow Function Component With Props": {
     "prefix": "sfcp",
     "body": [
-      "import PropTypes from 'prop-types'",
+      "interface ${1:${TM_FILENAME_BASE}}Props {}",
       "",
-      "const ${1:${TM_FILENAME_BASE}} = ({}) => {"
+      "const ${1:${TM_FILENAME_BASE}} = ({}: ${1:${TM_FILENAME_BASE}}Props) => {",
       "\treturn (${0})",
       "}",
-      "",
-      "${1:${TM_FILENAME_BASE}}.propTypes = {}",
       "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
@@ -76,13 +72,17 @@
   },
   "Add new state variable using useState Hook": {
     "prefix": "uhs",
-    "body": ["const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState(${2})"],
-    "description": "Add new state variable using useState hook"
+    "body": [
+      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState(${2})"
+    ],
+    "description": "Add new state variable using useState Hook"
   },
   "Add new state variable using useReducer Hook": {
     "prefix": "uhr",
-    "body": ["const [${1}, dispatch] = useReducer(${2}, ${3})"],
-    "description": "Add new state variable using useReducer hook"
+    "body": [
+      "const [${1}, dispatch] = useReducer(${2}, ${3})"
+    ],
+    "description": "Add new state variable using useReducer Hook"
   },
   "Add external state using useEffect Hook": {
     "prefix": "uhe",
@@ -91,6 +91,6 @@
       "\t${2}",
       "}, [${1}])"
     ],
-    "description": "Add external state using useEffect hook"
-  },
+    "description": "Add external state using useEffect Hook"
+  }
 }
