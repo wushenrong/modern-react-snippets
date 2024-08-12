@@ -17,7 +17,7 @@ Add React snippets that:
 
 Use [ESLint](https://eslint.org), [TypeScript ESLint][1], and a formatter
 (like [Prettier](https://prettier.io)) after adding snippets to conform to your
-coding style. Additionally add `"source.addMissingImports" = "explicit"` to
+coding style. Additionally add `"source.addMissingImports": "explicit"` to
 `"editor.codeActionsOnSave"` in your vscode settings to add imports.
 
 ## Release Notes
